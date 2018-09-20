@@ -1,0 +1,77 @@
+<!--<button (click)="openModal1('mod1')" class="btn">Modal 1</button>-->
+
+<div *ngIf="modal1State" id="mod1" class="row">
+    <div class="col s12 m6 offset-m3">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://drscdn.500px.org/photo/274908681/q%3D80_m%3D1000/v2?user_id=30905011&webp=true&sig=431ddb91ce4e41816950e6140214caac0739c1f21053c1b30ba244afad2f7890">
+        </div>
+        <div class="card-content center">
+          <p>¡Muchas gracias por tu colaboracón!</p>          
+          <p><strong>Tus datos han sido enviados con éxito</strong></p>
+          <p>Ya puedes cerrar tu navegador</p>
+        </div>
+        <div class="center">
+            <button (click)="closeModal1('mod1');" class="btn light-blue darken-2">Aceptar</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+<div *ngIf="!modal1State" class="card">
+  <div class="card-content center">
+    <span class="card-title">
+      Nuevo Registro
+    </span>
+    <form (ngSubmit)="onSubmit()" [formGroup]="frmRegistro" class="col s6">
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="nombre" type="text" required class="validate" formControlName="nombre" >
+                <label for="nombre">Nombre</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="apaterno" type="text" required class="validate" formControlName="apaterno" >
+                <label for="apaterno">Apellido paterno</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="amaterno" type="text" required class="validate" formControlName="amaterno" >
+                <label for="amaterno">Apellido Materno</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="telefono" type="text" required class="validate" formControlName="telefono" >
+                <label for="telefono">Telefono</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="correo" type="email" class="validate" formControlName="correo">
+                <label for="correo">Correo</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="iglesia" type="text" required class="validate" formControlName="iglesia" >
+                <label for="iglesia">Iglesia</label>
+            </div>
+      </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <input id="sector" type="number" required pattern="1|2|3" class="validate" formControlName="sector" >
+                <label for="sector">Sector</label>
+            </div>
+      </div>
+      <div class="row center">
+          <input type="submit" [disabled]="!frmRegistro.valid" class="btn btn-light">
+      </div>
+    </form>
+  </div>
+</div>
+
+
