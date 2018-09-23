@@ -35,11 +35,12 @@ modal2State: boolean = false;
       nombre:   ['', Validators.required],
       apaterno: ['', Validators.required],
       amaterno: ['', Validators.required],
-      telefono: ['',Validators.pattern('[0-9]+')],
+      telefono: ['', Validators.pattern('[0-9]+')],
       correo:   ['', Validators.email],
       iglesia:  ['', Validators.required],
       sector:   ['', Validators.pattern('[0-9]+')],
     })
+    
   }
 
 
@@ -72,6 +73,6 @@ modal2State: boolean = false;
     this.modal1State = false;
   }
 
-  
+    
 }
 

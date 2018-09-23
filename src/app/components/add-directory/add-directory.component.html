@@ -1,7 +1,7 @@
 <!--<button (click)="openModal1('mod1')" class="btn">Modal 1</button>-->
 
 <div *ngIf="modal1State" id="mod1" class="row">
-    <div class="col s12 m6 offset-m3">
+    <div class="col s12">
       <div class="card">
         <div class="card-image">
           <img src="https://drscdn.500px.org/photo/274908681/q%3D80_m%3D1000/v2?user_id=30905011&webp=true&sig=431ddb91ce4e41816950e6140214caac0739c1f21053c1b30ba244afad2f7890">
@@ -19,7 +19,7 @@
     </div>
   </div>
 
-<div *ngIf="!modal1State" class="card">
+<div *ngIf="!modal1State" class="card col s12">
   <div class="card-content center">
     <span class="card-title">
       Nuevo Registro
@@ -45,13 +45,13 @@
       </div>
       <div class="row">
             <div class="input-field col s12">
-                <input id="telefono" type="text" required class="validate" formControlName="telefono" >
+                <input id="telefono" type="number" required minlength="7" class="validate" formControlName="telefono" >
                 <label for="telefono">Telefono</label>
             </div>
       </div>
       <div class="row">
             <div class="input-field col s12">
-                <input id="correo" type="email" class="validate" formControlName="correo">
+                <input id="correo" type="email" required class="validate" formControlName="correo">
                 <label for="correo">Correo</label>
             </div>
       </div>
