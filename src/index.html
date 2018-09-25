@@ -8,11 +8,22 @@
 </head>
 <body>
   
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal col s12">
-        <div class="modal-content col s12">
-            <h4>Aviso importante</h4>
-            <!--img src="../../../assets/img/fjc.png" class="materialboxed center" width="10%">-->
+  
+  <div class="modal" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title"> <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Aviso Importante! </h4>
+           </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <img src="https://drscdn.500px.org/photo/274908681/q%3D80_m%3D1000/v2?user_id=30905011&webp=true&sig=431ddb91ce4e41816950e6140214caac0739c1f21053c1b30ba244afad2f7890"
+                      class="img-fluid rounded mx-auto d-block"height="130px" width="130px">
+                      <h4 class="text-center">FJC Distrito 8</h4>
+                  </div>
+                </div>
+              
             <p>Antes que nada te enviámos un saludo de ¡Paz! y agradecemos tu colaboración para poder concentrar el <strong>directorio de jóvenes 
               de la FJC del distrito 8.</strong>
               <br>
@@ -29,20 +40,21 @@
               ¡Bendiciones! ♥
             </p>
           </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect deep-purple lighten-2 btn"> Aceptar </a>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+          </div>
         </div>
+      </div>
     </div>
 
   <app-root></app-root>
-   <!--JavaScript at end of body for optimized loading-->
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
-
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script>
-     var elem = document.querySelector('.modal');
-     var options = {};
-     var instance = new M.Modal(elem, options);
-     instance.open();
+    $(document).ready(function(){
+    $("#myModal").modal();
+    });
    </script>
 </body>
 </html>

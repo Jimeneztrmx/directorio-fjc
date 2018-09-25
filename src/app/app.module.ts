@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AddDirectoryComponent } from './components/add-directory/add-directory.component';
-
+//bootstrap
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 //integración con firebase
@@ -27,7 +28,8 @@ import {FormsModule,ReactiveFormsModule } from '@angular/forms';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase,'directorio-fjc'),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
 
   ],
   providers: [DirectoryService],

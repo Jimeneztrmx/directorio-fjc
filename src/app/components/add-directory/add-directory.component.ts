@@ -35,10 +35,10 @@ modal2State: boolean = false;
       nombre:   ['', Validators.required],
       apaterno: ['', Validators.required],
       amaterno: ['', Validators.required],
-      telefono: ['', Validators.pattern('[0-9]+')],
+      telefono: ['', Validators.required],
       correo:   ['', Validators.email],
       iglesia:  ['', Validators.required],
-      sector:   ['', Validators.pattern('[0-9]+')],
+      sector:   ['', Validators.required],
     })
     
   }
@@ -50,19 +50,10 @@ modal2State: boolean = false;
  
   onSubmit()
   {
-    //(if(this.directory.nombre != '' && this.directory.apaterno != '' && this.directory.amaterno != ''){
-      //se agrega el registro
       
       this.directoryService.addRegistro(this.frmRegistro.value);
-      //se limpian campos
-      /*this.directory.nombre='';
-      this.directory.apaterno='';
-      this.directory.amaterno='';*/
-
       this.frmRegistro.reset();
       this.modal1State = true;
-            
-  //}
   }
 
   openModal1(){
